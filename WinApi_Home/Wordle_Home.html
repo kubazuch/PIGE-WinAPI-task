@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+    <h2>Wordle - Część Domowa</h2>
+    <ul>
+        <li><a href="Wordle_Home.exe">Aplikacja Przykładowa</a></li>
+        <li>Zadanie polega na stworzeniu prototypu gry Wordle</li>
+        <li>W przypadku niejasności program musi być zgodny z zachowaniem i wyglądem aplikacji przykładowej, jednak nie należy wzorować się na potencjalnych błędach</li>
+	</ul>
+	
+	<h3>Uwagi:</h3>
+	<ul>
+		<li>W części domowej należy korzystać z GDI!</li>
+		<li>Proszę pamiętać o prawidłowym zarządzaniu pamięcią (zwalnianie niepotrzebnych obiektów)</li>
+	</ul>
+		
+	<h3>Layout:</h3>
+	<ul>
+		<li>Okno klawiatury wyśrodkowane w poziomie oraz odsunięte w dół, powinno zawsze być widoczne w całości</li>
+        <li>Okna rozgrywki wyśrodkowane do zadanych części ekranu:</li>
+        <ul>
+            <li>Jedno okno - na środku ekranu</li>
+            <li>Dwa okna - wyśrodkowane w dwóch połówkach ekranu</li>
+            <li>Cztery okna - wyśrodkowane w czterech ćwiatrkach ekrau</li>
+        </ul>
+        <li>Stały rozmiar okien rozgrywki zależny od rozmiaru planszy</li>
+        <li>Stały rozmiar okna klawiatury dobrany losowo</li>
+		<li>Ustawiony tytuł "WORDLE - KEYBORD" oraz "WORDLE - PUZZLE" odpowiednio dla okna klawiatury i okien rozgryki</li>
+		<li>Ustawiona ikonka: "Wordle.ico" (Ikonka powinna być także widoczna w pasku zadań. Wystarczy jak będzie w oknie głównym.)</li>
+		<li>Kolor tła aplikacji: (255, 255, 255)</li>
+		<li>Kolory przycisków (tło literek) o rozmiarze 55 i marginesie między nimi 6:</li>
+		<ul>
+			<li>Litera pusta (domyślny kolor) - (251,252,255)</li>
+			<li>Litera niepoprawna - (164, 174, 196)</li>
+			<li>Litera w słowie ale w złym miejscu - (243,194,55)</li>
+			<li>Litera w poprawnym miejscu - (121,184,81)</li>
+		</ul>
+		<li>Ramka litery w kolorze przycisku i/lub kolorze niepoprawnym jeśli tła ma domyślny kolor</li>
+		<li>Domyślny rozmiar to 6 słów po 5 liter</li>
+        <li>Rozmiar zmienny zależnie od poziomu trudności (np Easy 6 słów, Medium 8 słów, Hard 10 słów)</li>
+		<li>Aplikacja wczytuje dostępne słowa z pliku txt</li>
+		<li>Każde okno rozgrywki posiada inne słowo do rozwiazania</li>
+		<li>Litery wpisywane są jednocześnie do wszystkich okien rozgrywki</li>
+		<li>Enter akceptuje słowo, Backspace usuwa literę</li>
+		<li>Słowa zaakceptowanego nie można zmieniać</li>
+		<li>Po akceptacji następuje animacja odkrycia liter w słowie</li>
+		<li>Jeśli słowo została odgadnięte, pojawia się zielony przezroczysty overlay a okno przestaje akceptować nowe litery</li>
+		<li>Jeśli nie odgadliśmy słowa pojawia się czerwony przezroczysty overlay a napisam zawierajacym poprawne hasło</li>
+		<li>Litery na klawiaturze kolorowane są natychmiastowo po odgadnieciu (Enter) zależnie od poziomu trudności i rozłożenia okien</li>
+	</ul>
+	<h3>Logika aplikacji:</h3>
+	<ul>
+		<li>Okno klawiatury zawsze jest przezroczyste</li>
+		<li>Okno klawiatury wyświetla litery jak na klawiaturze</li>
+		<li>Okno klawiatury i okna rozgrywki kolorują litery zależnie od ich statusu w danym oknie rozgrywki (kilka kolorów dla większe liczby okien rozgrywki)</li>
+        <li>Zmiana poziomu trudności (również na ten sam) powoduje restart rozgrywki i reset okien</li>
+		<li>Enter akceptuje słowo</li>
+		<li>Backspace usuwa literę</li>
+		<li>Wyświetlanie overlay zależnie od statusu gry</li>
+		<ul>
+			<li>Zielony - słowo odgadnięte</li>
+			<li>Czerwony z wyświetlonym rozwiazaniem - przegrana</li>
+		</ul>
+		<li>Litery odkrywane są przy pomocy animacji</li>
+		<li>Rysowanie okna nie powinno powodować mrugania</li>
+		<li>Wpisywanie liter odbywa się tylko w momencie kiedy okno klawiatury ma focus</li>
+		<li>Aplikacja korzysta z zapisu/wczytania poziomu trudności do/z pliku ini</li>
+	</ul>
+	
+    <h3>Wskazówki:</h3>
+	<ul>
+		<li>SelectObject</li>
+		<li>DeleteObject</li>
+		<li>CreateCompatibleDC</li>
+		<li>CreateCompatibleBitmap</li>
+		<li>CreateSolidBrush</li>
+		<li>AdjustWindowRect</li>
+		<li>WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX</li>
+        <li>SetTimer</li>
+		<li>SetWindowLong</li>
+        <li>SetLayeredWindowAttributes</li>
+		<li>GetSystemMetrics</li>
+		<li>MoveWindow</li>
+		<li>GetPrivateProfileString</li>
+		<li>WritePrivateProfileString</li>
+    </ul>
+
+    <h3>Punktacja:</h3>
+    <ul>
+		<li>Wpisywanie liter w okna rozgrywki - 1p</li>
+		<li>Zapisywanie i wczytywanie ustawionego wcześniej poziomu trudności do pliku ini - 1p</li>
+		<ul>
+			<li>W przypadku braku pliku wybrać losowo wartość domyślną</li>
+		</ul>
+		<li>Rysowanie liter w klawiaturze i oknach rozgrywki - 2p</li>
+		<li>Kolorowanie liter w klawaiturze i oknach rozgrywki zależnie od ich występowania - 2p</li>
+		<li>Animacja odkrywania liter po ich zaakceptowaniu - 2p</li>
+		<li>Mechanika akceptowania i usuwania niezatwierdzonych liter - 1p</li>
+		<ul>
+			<li>Sprawdzenie czy w słowniku jesli tak, odkrywany i przechodzimy dalej, jeśli nie usuwany całe słowo i zaczynamy od nowa</li>
+		</ul>
+		<li>Overlay na koniec rozgrywki (zielony i czerwony) - 2p</li>
+		<li>Poruszanie oknem za pomocą całej przestrzeni (nie tylko na pasek tutułowy) - 1p</li>
+    </ul>
+
+	<h3>
+		Note: W aplikacji przkładowej kolorowanie liter nie sprawdza, czy litera która jest w poprawnym miejscu jest równiż w innym.
+		Oryginalne wordle w takiej sytuacji nie pokazuje, ze druga litera jest w miejscu innym niż powinna być (ale występuje w słowie).
+		W przypadku aplikacji przykładowej obie zostaną pokolorowane (jedna na zielona, druga na złóto), mimo, że jedna z nich już jest poprawna.
+		Wasza aplikacja może implementować jedno lub drugie podejście.
+	</h3>
+    </body>
+</html>
