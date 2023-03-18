@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+    <h2>Wordle - Laboratorium</h2>
+    <ul>
+        <li><a href="Wordle_Lab.exe">Aplikacja Przykładowa</a></li>
+        <li>Zadanie polega na stworzeniu prototypu gry Wordle</li>
+        <li>W przypadku niejasności program musi być zgodny z zachowaniem i wyglądem aplikacji przykładowej, jednak nie należy wzorować się na potencjalnych błędach</li>
+	</ul>
+	
+	<h3>Uwagi:</h3>
+	<ul>
+		<li>W części laboratoryjnej nie można korzystać z GDI!</li>
+		<li>Proszę pamiętać o prawidłowym zarządzaniu pamięcią (zwalnianie niepotrzebnych obiektów)</li>
+	</ul>
+		
+	<h3>Layout:</h3>
+	<ul>
+		<li>Okno klawiatury wyśrodkowane w poziomie oraz odsunięte w dół, powinno zawsze być widoczne w całości</li>
+        <li>Okna rozgrywki wyśrodkowane do zadanych części ekranu:</li>
+        <ul>
+            <li>Jedno okno - na środku ekranu</li>
+            <li>Dwa okna - wyśrodkowane w dwóch połówkach ekranu</li>
+            <li>Cztery okna - wyśrodkowane w czterech ćwiatrkach ekrau</li>
+        </ul>
+        <li>Stały rozmiar okien rozgrywki zależny od rozmiaru planszy</li>
+        <li>Stały rozmiar okna klawiatury dobrany losowo</li>
+		<li>Ustawiony tytuł "WORDLE - KEYBORD" oraz "WORDLE - PUZZLE" odpowiednio dla okna klawiatury i okien rozgryki</li>
+		<li>Ustawiona ikonka: "Wordle.ico" (Ikonka powinna być także widoczna w pasku zadań. Wystarczy jak będzie w oknie głównym.)</li>
+		<li>Kolor tła aplikacji: (255, 255, 255)</li>
+		<li>Kolor przycisków (tło literek): (164, 174, 196) o rozmiarze 55 i marginesie między nimi 6</li>
+		<li>Domyślny rozmiar to 6 słów po 5 liter</li>
+        <li>Rozmiar zmienny zależnie od poziomu trudności (np Easy 6 słów, Medium 8 słów, Hard 10 słów)</li>
+	</ul>
+	<h3>Logika aplikacji:</h3>
+	<ul>
+		<li>Okno klawiatury zawsze jest przezroczyste</li>
+        <li>Zmiana poziomu trudności (również na ten sam) powoduje restart rozgrywki i reset okien</li>
+	</ul>
+	
+    <h3>Wskazówki:</h3>
+	<ul>
+		<li>CreateSolidBrush</li>
+		<li>AdjustWindowRect</li>
+		<li>WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX</li>
+        <li>SetTimer</li>
+		<li>SetWindowLong</li>
+        <li>SetLayeredWindowAttributes</li>
+		<li>GetSystemMetrics</li>
+		<li>MoveWindow</li>
+    </ul>
+
+    <h3>Punktacja:</h3>
+    <ul>
+		<li>Tytuł, ikona, tło - 2p</li>
+        <li>Menu w wyborem poziomu trudności (zaznaczalne) - 1p</li>
+        <li>Liczenie czasu od rozpoczęcia rozgrywki i wyświetlanie w tytule - 1p</li>
+		<li>Okno rozgrywki z ustawionym kolorem i właściwym rozmiarem - 2p</li>
+        <li>Okna reprezentujące literki ułożone w odpowiedni sposób, posiadające odpowiedni kolor - 1p</li>
+		<li>Stały rozmiar okien - 1p</li>
+		<li>Obsługa wielu okien - 2p</li>
+		<ul>
+			<li>Nie pojawia się na pasku zadań - 1</li>
+			<li>Odpowednie rozmieszczenie zależne od poziomu trudności - 1</li>
+		</ul>
+		<li>Przezroczystość okna klawiatury - 2p</li>
+    </ul>
+    </body>
+</html>
