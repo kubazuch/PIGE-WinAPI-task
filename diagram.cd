@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="keyboard_window">
+    <Position X="9" Y="13" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ACAAEAAIBAAAAAQAQAIAAEAAAAAAAAAIBABAAEAAAAA=</HashCode>
+      <FileName>wordle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="game_window">
+    <Position X="5.75" Y="13" Width="1.5" />
+    <InheritanceLine Type="window" FixedToPoint="true">
+      <Path>
+        <Point X="7.5" Y="12.331" />
+        <Point X="7.5" Y="12.625" />
+        <Point X="6.875" Y="12.625" />
+        <Point X="6.875" Y="13" />
+      </Path>
+    </InheritanceLine>
+    <InheritanceLine Type="board" FixedToPoint="true">
+      <Path>
+        <Point X="4.625" Y="12.286" />
+        <Point X="4.625" Y="12.625" />
+        <Point X="6.125" Y="12.625" />
+        <Point X="6.125" Y="13" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAgAAAABQEAAwAAAAAIAABACAAAAIEAAAABAAAAAAAA=</HashCode>
+      <FileName>wordle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="window">
+    <Position X="6.25" Y="1.25" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="window::window_class">
+        <Compartments>
+          <Compartment Name="Nested Types" Collapsed="false" />
+        </Compartments>
+        <NestedTypes>
+          <Class Name="window::window_class::builder">
+            <TypeIdentifier>
+              <NewMemberFileName>window.h</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+        </NestedTypes>
+        <TypeIdentifier>
+          <NewMemberFileName>window.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>gAABIBAAACAAAAAAAAIAABAwAAAAAAAIDABkAAAAAQA=</HashCode>
+      <FileName>window.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="board">
+    <Position X="3.75" Y="9" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAATAQAAAAgQAAQAAAAgAKAAAAAAAAAA=</HashCode>
+      <FileName>board.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="field">
+    <Position X="1.75" Y="1.25" Width="1.5" />
+    <NestedTypes>
+      <Class Name="field::type_t" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>board.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>board.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="game_field">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAIABAAAAAIAAAAAAQAA=</HashCode>
+      <FileName>board.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="keyboard_field">
+    <Position X="2.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>board.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
